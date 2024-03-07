@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inside Sandeep Heart</title>
+ 
+    
+    <style>
+        body {
+
+            
+            font-family: Arial, sans-serif;
+            background-color: #f7eaea; /* Romantic background color */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+
+          
+        }
+        .heart-container {
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.3s;
+            
+        }
+        .heart {
+            font-size: 200px;
+            color: #ff1493; /* Deep Pink color */
+            display: block;
+            margin: auto;
+            
+        }
+        .name-overlay {
+            position: absolute;
+            bottom: -200px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(255, 105, 180, 0.8); /* Pink background color with opacity */
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 10px 10px 0 0;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            transition: bottom 0.5s;
+            pointer-events: none;
+            visibility: hidden;
+            opacity: 0;
+        }
+        .heart-container.active .name-overlay {
+            bottom: 0;
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
+</head>
+
+
+
+    <div class="heart-container" onclick="revealName()" style="size-adjust: 100px;">
+       
+        <br>
+        <span class="heart">❤️</span>
+        <div class="name-overlay">Priya</div>
+    </div>
+
+    <script>
+        function revealName() {
+            var heartContainer = document.querySelector('.heart-container');
+            heartContainer.classList.toggle('active');
+        }
+    </script>
+    
+
+    
+
+</body>
+
+</html>
